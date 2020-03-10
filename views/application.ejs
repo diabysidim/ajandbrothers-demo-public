@@ -1,0 +1,251 @@
+ <%-include('./partials/header')%>
+ <script src="https://www.google.com/recaptcha/api.js?render=6Lcli9YUAAAAAO2Z7SZrsFBo3_hzSgKKY-PF26yH" async></script>
+ <link rel="stylesheet" type="text/css" href="/assets/css/apply.css">
+ <link rel="stylesheet" href="/assets/css/footer.css" async>
+
+ <head>
+<body>
+    <div class='apply-container'> 
+
+        <div class="apply-img" style="background-image: url('/assets/img/IMG_1266-min.JPG');">  </div>
+
+        <div class='apply-form-container'>
+
+            <h1>Formulaire d'Application</h1>
+
+            <form  id="apply-form" action="/apply" method="POST">
+                
+               
+               <ul>
+                    <li>
+                        <label for='last-name'>Nom: <input name="last-name" type="text" placeholder="Nom de famille" required></label>
+                        <label for='name'>Prenom: <input name="name" type="text" placeholder="Prenom" required></label>                       
+                    </li>
+                    <li>
+                        <label for='passport'>Numero de passport:<input name="passport" type="text" placeholder="Votre numero de passport" required></label>
+                                                
+                    </li>
+                    <li>
+                        <label for='email'>Email: <input name="email" type="text" placeholder="Votre adresse mail" required></label>
+                                                
+                    </li>
+                    <li>
+                        <label for='phone'>Numero de telephone: <input name="phone" type="tel" placeholder="Ex:+221#######" required></label>
+                    </li>
+                    <li>
+                        <label for='birth-date'>Date de naissance: <input name="birth-date" type="date"  required></label>
+                        <label for='birth-place'>Lieu de naissance: <input name="birth-place" type="text"  required></label>
+
+                    </li>
+                    <li>
+                        <label for='nationality'>Nationalite: </label>
+                        <%-countryOptions("nationality")%>
+                    </li>
+                    <li>
+                        <label for="gender"> Genre:
+                            <label for='male'><input name="gender" type="radio" id="male" value='Male'required>Homme</label>
+                            <label for='female'><input name="gender" type="radio" id="female" value="female">Femme</label>
+                            <label for='others'><input name="gender" type="radio" id="other" value="others">Autres</label>
+                        </label>                                   
+                        
+                    </li>
+                    <li>
+                        <label for="marriage"> etes vous marrie(e)?
+                            <label for='yes'><input name="marriage" type="radio" id="yes" value="yes" required>Oui</label>
+                            <label for='no'><input name="marriage" type="radio" id="no" value="non">Non</label>
+                        </label>
+                    </li>
+                    
+
+                    <li>
+                        <label for="start-date">Rentree desiree</label>
+                        <select name="start-date" id="start-date" required>
+                            <option value="January">Janvier</option>
+                            <option value="January">Mars</option>
+                            <option value="January">Juin</option>
+                            <option value="January">Aout</option>
+                            <option value="January">Octobre</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="bac"> Avez vous ou comptez vous obtenir le BAC avant la rentree?:
+                            <label for='yes'><input onclick="document.getElementById('bac-year').disabled=false" name="bac" type="radio" id="yes" value='yes' required>Oui</label>
+                            <label for='no'><input onclick="document.getElementById('bac-year').disabled=true" name="bac" type="radio" id="no" value="non">Non</label>
+                        </label>  
+
+                    </li> 
+                    
+                        <li>
+                            <label for="bac-year">Date d'obtention: <input type="month" id="bac-year" name="bac-year"
+                                min="1900-03"  required ></label>
+                        </li>
+
+                  
+
+                        <li> <p>Entrez votre adresse et code postale</p></li>
+                        <li>                        
+                            <label for='street-address'>Rue: <input name="street-address" type="text" placeholder="Le nom de la rue" class="big" required></label>
+                            <label for='street-city'>Ville: <input name="street-city" type="text" placeholder="Ville"></label>
+                        </li>
+                        <li>
+                            
+                            <label for="country">Pays: </label>      
+                            <%-countryOptions("country")%>
+                            <label for="zip-code">Code Postale: <input type="text" name="zip-code" class="small"></label>
+                        </li>
+                        
+
+
+                        
+                   
+                   
+                    <div>
+                        <h1>Information du sponsor</h1>
+
+                        
+                    <li>
+                        <label for='sponsor-last-name'>Nom: <input name="sponsor-last-name" type="text" placeholder="Nom de famille" required></label>
+                        <label for='sponsor-name'>Prenom: <input name="sponsor-name" type="text" placeholder="Prenom" required></label>                       
+                    </li>
+                   
+                    <li>
+                        <label for='sponsor-email'>Email: <input name="sponsor-email" type="text" placeholder="Votre adresse mail" required></label>
+                                                
+                    </li>
+                    <li>
+                        <label for='sponsor-phone'>Numero de telephone: <input name="sponsor-phone" type="tel" placeholder="Ex:+221#######" required></label>
+                    </li>
+                    <li>
+                        <label for='sponsor-nationality'>Nationalite: </label>
+                        <%-countryOptions("sponsor-nationality")%>
+                    </li>
+                                        
+                    
+
+                        <li> <p>Entrez l'adresse et code postale du sponsor</p></li>
+                        <li>                        
+                            <label for='sponsor-street-address'>Rue: <input name="sponsor-street-address" type="text" placeholder="Le nom de la rue" class="big" required></label>
+                            <label for='sponsor-street-city'>Ville: <input name="sponsor-street-city" type="text" placeholder="Ville" required></label>
+                        </li>
+                        <li>
+                            
+                            <label for="sponsor-country">Pays: </label>      
+                            <%-countryOptions("sponsor-country")%>
+
+                            <label for="sponsor-zip-code">Code Postale: <input type="text" name="sponsor-zip-code" class="small" required></label>
+                        </li>
+
+                    </div>
+                    <li style="display: flex; align-items: center;">
+                        <input type='checkbox'value='agreed'name='consent' value='true' required style="margin: 5px 5px; margin-bottom: 0;"> 
+                        <label for="consent" >je confirme que les renseignements ci-dessus sont exacts</ci-desus></label>
+                    </li>
+               </ul>
+                   
+
+               <div style="display: flex; justify-content: center; align-items: center;" >
+                <button class=" button">Envoyer</button>
+                <a href="/" name='back'>Retourner</a>
+                
+                
+               </div>
+                    
+               
+             
+            </form>
+           
+        </div>
+
+
+
+    </div>
+    <script>
+
+    document.getElementById('apply-form').addEventListener('submit', handleApplyForm);
+
+
+
+
+        function handleApplyForm(e){
+
+            e.preventDefault();
+            
+            
+            grecaptcha.execute('6Lcli9YUAAAAAO2Z7SZrsFBo3_hzSgKKY-PF26yH', {action: 'homepage'}).then(function(token) {
+
+                const inputs = document.querySelectorAll('input');
+
+                const button= document.querySelector('button');
+           
+                button.disabled =true;
+                const reqObj = {
+                    capcha: token,
+                }
+
+                for(let input of inputs){
+
+                
+
+                    if(input.name==='gender')  {            
+
+                        if(input.checked)  reqObj[input.name] =input.value;
+
+                    }   
+                    else if(input.name==='marriage')  {            
+
+                            if(input.checked)  reqObj[input.name] =input.value;
+
+                            } 
+                    else if(input.name==='bac')  {            
+
+                            if(input.checked)  reqObj[input.name] =input.value;
+
+                            } 
+                    else{
+
+                        reqObj[input.name] =input.value;
+                    }  
+
+            }
+
+        
+               
+            fetch('/apply',{
+
+                method:'post',
+                headers:{
+                    "accept" : 'application/json, text/plain, */*',
+                    "content-type": 'application/json'
+
+                },
+                
+                body: JSON.stringify(reqObj)
+            }).then( response => response.json()).then(data => {
+
+                if(!data.success) {
+                    alert(data.msg)
+                
+           
+                button.disabled =false;
+                }
+                else{
+
+                    window.location = '/success';
+                }
+
+                
+            })
+
+        
+            
+
+            }) 
+        }
+
+              
+    </script>
+
+
+
+
+<%-include('./partials/footer')%>

@@ -1,0 +1,89 @@
+
+#footer{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	text-align: center;
+	background-color: black;
+	height: 200px;
+	color: gold;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.footer{
+
+	height: 200px;
+}
+
+
+.footer h2{
+
+	font-size: 25px;
+	margin: 20px;
+}
+
+.footer h3 {
+
+	font-size: 18px;
+	margin: 20px;
+}
+.footer a{
+	margin: 10px;
+	font-size: 40px;
+}
+
+.button{
+	border: 3px solid black;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin: 5px 10px;
+	width: 175px;
+	height: 50px;
+	font-size: 15px;
+	/* font-weight: bold; */
+	text-decoration: none;
+	text-transform: uppercase;
+	border-top-right-radius: 50px 100%;
+	border-bottom-right-radius: 50px 100%;
+	border-top-left-radius: 50px 100%;
+	border-bottom-left-radius: 50px 100%;
+	-webkit-box-shadow: 8px black;
+			box-shadow: 8px black;
+			
+			background-color: black ;
+	color: gold; 
+	
+	
+}
+
+.button:hover{
+	background-color: gold;
+	color: black;
+	-webkit-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+	border: 3px solid gold;
+	-webkit-box-shadow: 8px gold;
+			box-shadow: 8px gold;
+}
+
+@media only screen and (max-width:800px){
+
+	#footer{
+		max-width: 100vw;
+		
+	}
+
+	
+}

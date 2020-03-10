@@ -1,0 +1,177 @@
+
+*{
+	box-sizing: border-box;
+}
+html, body, div, span, applet, object, .iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.apply-container{
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;	
+	min-height: 400px;
+	-webkit-box-shadow: 1px 1px rgba(0,0,0,0.1);
+	        box-shadow: 1px 1px rgba(0,0,0,0.1);
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	max-width:90% ;
+
+}
+.apply-container h1{
+	font-size: 2rem;
+	margin: 10px;
+}
+
+.apply-container .apply-img{
+
+	
+	width: 40%;
+	min-height: 300px;
+	background-size: cover;
+	background-position: center;
+}
+
+.apply-container .apply-form-container{
+	
+	width: 60%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	
+	
+
+}
+
+.apply-container .apply-form-container h1{
+
+	text-align: center;
+}
+
+
+.apply-container .apply-form-container form{
+
+	display: -webkit-box;
+	width: 90%;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.apply-container .apply-form-container form ul{
+
+	list-style-type: none;
+	width: 100%;
+	padding: 0;
+}
+.apply-container .apply-form-container form li{
+
+	margin-top: 10px;
+}
+.apply-container .apply-form-container form .personal-info > *{
+	margin: auto;
+}
+select{
+
+	width: 100px;
+	height: 25px;
+}
+.apply-container .apply-form-container div{
+	margin-top: 15px;
+}
+.apply-container  button{
+
+	margin-top: 10px;
+	cursor: pointer;
+	
+}
+
+.apply-container .small{
+
+	width: 50px;
+}
+
+.apply-container .big{
+	width: 250px;
+}
+
+@media only screen and (max-width: 800px){
+
+	.apply-container{
+
+		flex-direction: column;
+	}
+	.apply-container .apply-img{
+
+		width: 100%;
+		height: 500px;
+		background-position: top center;
+
+	}
+	.apply-container .apply-form-container{
+	
+	width: 100%;
+	
+	
+	
+
+}
+
+}

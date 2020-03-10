@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html charset= "UTF-8">
+
+    <head>
+        <title>
+            application sur ajandbrothers.com 
+        </title>
+    </head>
+
+    <style>
+        p{ text-align: center;} 
+    </style>
+    <body>
+
+            <h1>Vous avez recu une application sur ajandbrothers.com</h1>
+
+   
+  
+
+            <table>
+
+                {{#each application}}
+                <tr>
+                    <td>
+                            {{@key}}                        
+                    </td>
+                    <td>
+                        {{this}}
+                    </td>
+                </tr>
+                {{/each}}
+                
+
+            </table>
+
+
+        
+    </body>
+
+</html>

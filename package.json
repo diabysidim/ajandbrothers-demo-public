@@ -27,7 +27,7 @@
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-sanitizer": "^1.0.5",
-    "handlebars": "^4.7.3",
+    "handlebars": "^4.7.7",
     "helmet": "^3.21.3",
     "mongodb": "^3.5.4",
     "mongoose": "^5.9.3",
